@@ -54,22 +54,15 @@ else if(scores <= 69 && scores >= 60) console.log("Your grade is C!");
 else if(scores <= 59 && scores >= 50) console.log("Your grade is D!");
 else if(scores <= 49 && scores >= 0) console.log("Your grade is E!");
 
-// Loops in JavaScript
 for(let i = 1; i <= 100; i++){
     console.log("Hello World!")
 }
 
-// Prompt always input string
-let p = 65; // The number to guess, initialized to 65
-
-let i = prompt("Guess Number: "); // Get user's first guess in i
-
-while(Number(i) != p) { // Keep looping as long as guess is not correct
-  
-  alert("You guessed the wrong number, guess again"); // Alert user they are wrong
-  
-  i = prompt("Guess Number: "); // Get next guess from user
+let p = 65;
+let i = prompt("Guess Number: ");
+while(Number(i) != p) {
+  alert("You guessed the wrong number, guess again");
+  i = prompt("Guess Number: ");
   
 }
-
-alert("You guessed the correct number!"); // Alert when user guesses correctly
+alert("You guessed the correct number!");
