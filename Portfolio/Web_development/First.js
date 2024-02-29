@@ -1,3 +1,4 @@
+console.log("Edited and pushed succesfully");
 console.log("Hello Js!");
 fullname = "Bucky Barnes";
 price = 99.99;
