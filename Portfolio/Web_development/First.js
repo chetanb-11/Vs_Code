@@ -60,11 +60,46 @@ for(let i = 1; i <= 100; i++){
     console.log("Hello World!")
 }
 
-let p = 65;
-let i = prompt("Guess Number: ");
-while(Number(i) != p) {
-  alert("You guessed the wrong number, guess again");
-  i = prompt("Guess Number: ");
+// let p = 65;
+// let i = prompt("Guess Number: ");
+// while(Number(i) != p) {
+//   alert("You guessed the wrong number, guess again");
+//   i = prompt("Guess Number: ");
   
-}
-alert("You guessed the correct number!");
+// }
+// alert("You guessed the correct number!");
+
+
+
+let str = "Hello World!";
+console.log(str.length);
+console.log(str[0]);
+
+let sentence = `This is a template literal`;
+
+let obj = {
+  item: "pen",
+  price: 15,
+};
+let str2 = "Barnes!";
+// Template Literals in JS 
+  // String Interpolation
+    // Other way of writing this
+    console.log("the cost of", obj.item, "is", obj.price, "rupees");
+    // OR 
+    console.log(`the cose of ${obj.item} is ${obj.price} rupees`);
+    // ${obj.item} is known as placeholders
+
+// String Methods in JS
+  // Strings are immutable
+  // Functions to manipulate a string
+  str.toUpperCase();
+  str.toLowerCase();
+  str.trim(); //removes whitespaces from starting and ending
+  // Never changes original string creates new string with new value
+  str.slice(2, 5); //returns part of string
+  str.concat(str2); //conbines two strings
+  str.replace("H", "Y");
+  str.replaceAll("H", "Y");
+  str.charAt(3);
+  
