@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <script src="login.js" defer></script>
+</head>
+<body>
+    <!-- Your website content goes here -->
+
+    <!-- Login form -->
+    <div id="loginForm" style="display: none;">
+        <h2>Login</h2>
+        <form id="login" onsubmit="return loginUser()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <br>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    <script>
+        // Set the delay (in milliseconds) before showing the login form
+    const delayBeforeLogin = 5000; // 5 seconds
+    
+    // Function to show the login form after a delay
+    function showLoginForm() {
+        setTimeout(() => {
+            document.getElementById('loginForm').style.display = 'block';
+        }, delayBeforeLogin);
+    }
+    
+    // Function to handle login
+    function loginUser() {
+        // Add your login logic here (e.g., send a request to the server)
+        // For demonstration purposes, simply hide the login form
+        document.getElementById('loginForm').style.display = 'none';
+        return false; // Prevent form submission
+    }
+    
+    // Call the function to show the login form after the delay
+    showLoginForm();
+    
+    </script>
+</body>
+</html>

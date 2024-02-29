@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            margin: 20px;
+        }
+
+        .auth-options {
+    margin-top: 30px;
+  }
+  
+  .auth-options button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #f77070;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .auth-form {
+    display: none;
+    text-align: left;
+    margin-top: 20px;
+    background-color: rgba(14, 1, 1, 0.888);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 1000px;
+    margin: auto;
+  }
+  
+  .auth-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .auth-form label,
+  .auth-form input,
+  .auth-form button {
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .auth-form label {
+    color: #555;
+  }
+  
+  .auth-form input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .auth-form button {
+    padding: 12px;
+    cursor: pointer;
+    background-color: #27ae60;
+    color: #271a1a;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  
+  .auth-form button:hover {
+    background-color: #219d54;
+  }
+        .filter-btn {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .gallery-item {
+            margin: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Image Gallery</h1>
+        <p>Explore our collection with filters</p>
+    </header>
+
+    <main>
+        <div class="auth-options">
+            <button onclick="toggleForm('login')">Login</button>
+            <button onclick="toggleForm('signup')">Sign Up</button>
+        </div>
+
+
+        <div id="loginForm" class="auth-form">
+            <h2>Login</h2>
+            <form onsubmit="login(event)">
+              <label for="username">Username:</label>
+              <input type="text" id="username" required>
+      
+              <label for="password">Password:</label>
+              <input type="password" id="password" required>
+      
+              <button type="submit">Login</button>
+            </form>
+          </div>
+      
+          <div id="signupForm" class="auth-form">
+            <h2>Sign Up</h2>
+            <form onsubmit="signup(event)">
+              <label for="newUsername">Username:</label>
+              <input type="text" id="newUsername" required>
+      
+              <label for="newPassword">Password:</label>
+              <input type="password" id="newPassword" required>       
+      
+              <button type="submit">Sign Up</button>
+            </form>
+          </div>
+
+        <div>
+        <a href="/Image gallery 2.html"><button>hii</button></a>  
+        </div>
+    </main>
+
+    <script>
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            items.forEach(item => {
+                const itemCategory = item.dataset.category;
+                if (category === 'all' || itemCategory === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+
+
+
+        function toggleForm(formType) {
+    var loginForm = document.getElementById('loginForm');
+    var signupForm = document.getElementById('signupForm');
+  
+    if (formType === 'login') {
+      loginForm.style.display = 'block';
+      signupForm.style.display = 'none';
+    } else if (formType === 'signup') {
+      loginForm.style.display = 'none';
+      signupForm.style.display = 'block';
+    }
+  }
+  
+  var newUsername;
+  var newPassword;
+
+  function signup(event) {
+    event.preventDefault();
+  
+    newUsername = document.getElementById('newUsername').value;
+    newPassword = document.getElementById('newPassword').value;
+  
+    // Add your signup logic here
+    // For simplicity, you can just log the new user in
+    alert('Sign up successful! Logging in as ' + newUsername);
+    document.getElementById('loginForm').style.display = 'none';
+    document.getElementById('signupForm').style.display = 'none';
+  }
+
+
+  function login(event) {
+    event.preventDefault();
+    
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+  
+    // Add your authentication logic here
+    // For simplicity, let's use a hardcoded username and password
+    if (username === newUsername && password === newPassword) {
+      document.getElementById('loginForm').style.display = 'none';
+      document.getElementById('signupForm').style.display = 'none';
+      alert('Correct')
+    } else {
+      alert('Invalid username or password. Please try again.');
+    }
+  }
+  
+
+    </script>
+</body>
+</html>

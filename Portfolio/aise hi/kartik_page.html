@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+
+        body {
+            background-color: darkgray;
+        }
+
+        #bada-div {
+            width: 1000px;
+            height: 900px;
+            background-color: #fff;
+            margin: auto;
+        }
+
+        #title-div {
+            width: inherit;
+            height: 40px;
+            background-color:blue;
+        }
+
+        #logo-div {
+            width: 25px;
+            height: 34px;
+            background-color: white;
+            margin-top: 3px;
+            float: left;
+            margin-left: 10px;
+            background-image: url(IMG_20230916_023409.jpg) ;
+            background-size: contain;
+        }
+
+        #title-text-div {
+            /* background-color: aqua; */
+            width: 200px;
+            margin-top: 10px;
+            float: left;
+            ;
+            margin-left: 20px;
+            font-size: 20px;
+            font-style: italic;
+        }
+
+        #icon-google {
+            width: 36px;
+            height: 36px;
+            /* background-color: #fff;  */
+            float: right;
+            margin-right: 10px;
+            margin-top: 3px;
+            background-image: url(whatsapp.webp);
+            background-size: contain;
+        }
+
+        #icon-you {
+            width: 36px;
+            height: 36px;
+            /* background-color: #fff;  */
+            float: right;
+            margin-right: 10px;
+            margin-top: 3px;
+            background-image: url(insta.jpg);
+            background-size: contain;
+            border-radius: 50%;
+        }
+
+        .sm:hover {
+            transform: scale(1.20);
+        }
+
+        #menu {
+            width: inherit;
+            height: 40px;
+            /* background-color: yellowgreen; */
+        }
+
+        #menu ol {
+            list-style: none;
+            padding-left: 0px;
+
+        }
+
+        #menu li {
+            float: left;
+            padding: 10px;
+            background-color:blue;
+            color: black;
+            margin-right: 2px;
+            cursor: pointer;
+        }
+
+        #menu li:hover {
+            background-color: red;
+            color: black;
+        }
+
+        #title-pic {
+            background-image: url(IMG_20230903_112021.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width:1000px;
+            height: 400px;
+        }
+
+        #title-pic:hover {
+            opacity: .8;
+            ;
+            background-image: url(IMG_20230903_111959\ \(1\).jpg);
+
+        }
+
+        #products {
+            width: inherit;
+            background-color: blue;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #cards-div {
+            width: 1000px;
+            height: 320px;
+            margin-top: 5px;
+            /* background-color: aquamarine; */
+            /* border-bottom: 1px black solid; */
+        }
+
+        #cards-place {
+            width: 800px;
+            height: 300px;
+            /* background-color: white; */
+            margin: auto;
+        }
+
+        .card {
+            width: 240px;
+            border: 1px orange solid;
+            height: inherit;
+            float: left;
+            padding: 5px;
+            /*         R    B   Blurness */
+            box-shadow: 0px 5px 5px gray;
+            cursor: pointer;
+
+        }
+
+        .card:hover {
+            /*           L    T   */
+            box-shadow: -3px -3px 10px gray;
+        }
+
+        .pic1 {
+            width: 120px;
+            height: 120px;
+            background-image: url(IMG_20230916_024936.jpg);
+            background-size: contain;
+            /* border-radius: 0px 0px 20px 20px; */
+            border-radius: 50%;
+            border-bottom: 1px black solid;
+            margin: auto;
+        }
+        .pic2{width: 120px;
+            height: 120px;
+            background-image: url(banner1.jpg);
+            background-size: contain;
+            /* border-radius: 0px 0px 20px 20px; */
+            border-radius: 50%;
+            border-bottom: 1px black solid;
+            margin: auto;
+
+        }
+
+        .txt {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .btn {
+            width: 100px;
+            text-align: center;
+            background-color: red;
+            padding-top: 5px;
+            padding-bottom: 5px;
+
+            font-weight: bolder;
+            margin: auto;
+            margin-top: 5px;;
+            border-radius: 10px;
+            transition: ease all .5s;
+            ;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="bada-div">
+        <div id="title-div">
+            <div id="logo-div"></div>
+            <div id="title-text-div">www.fcbarcelona.com</div>
+            <div id="icon-google" class="sm"></div>
+            <div id="icon-you" class="sm"></div>
+        </div>
+        <div id="menu">
+            <ol>
+                <li>Home</li>
+                <li>Our Products</li>
+                <li>FIRST Team</li>
+                <li>Connect with us</li>
+                <li>Reach Us</li>
+            </ol>
+        </div>
+        <div id="title-pic"></div>
+        <div id="products">
+            <center>
+                <div style="font-size: 30px;">FIRST TEAM PLAYERS</div>
+            </center>
+        </div>
+        <div id="cards-div">
+            <div id="cards-place">
+                <div class="card" style="margin-left:10px ;">
+                    <div class="pic1"></div>
+                    <span>
+                        <h2>Robert Lewandowski</h2>
+                    </span>
+                    <div class="txt">
+Robert Lewandowski is a Polish professional footballer who plays as a striker for La Liga club Barcelona and captains the Poland national team.Recognised for his positioning, technique and finishing.
+                    </div>
+                    <div class="btn">Detalis</div>
+                </div>
+
+
+
+
+                <div class="card" style="margin:0px 10px 0px 10px ;">
+                    <div class="pic2"></div>
+                    <span>
+                        <h2>Pedri</h2>
+                    </span>
+                    <div class="txt">
+                        
+                        Pedri is a Spanish professional footballer who plays as a central midfielder for La Liga club Barcelona and the Spain national team. Known for his intelligence, creativity, stamina and work-rate,
+                    </div>
+                    <div class="btn">Details</div>
+                
+                </div>
+                <div class="card">3</div>
+            </div>
+        </div>
+        <br><br>
+
+        <div id="products">
+            
+                <div style="font-size: 30px;">Reach Us</div>
+                <hr>
+                <center>
+                
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.6864765679197!2d2.120244875653535!3d41.38089597130067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a498f576297baf%3A0x44f65330fe1b04b9!2sSpotify%20Camp%20Nou!5e0!3m2!1sen!2sin!4v1693715880522!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  
+                
+            </center>
+        </div>
+    </div>
+</body>
+
+</html>

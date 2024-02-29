@@ -1,0 +1,66 @@
+*{
+    margin: 0;  
+    /* m0 */
+    padding: 0;
+    /* p0 */
+}
+/* * is univeral selector */
+
+body{
+    /* background-image: url(background.jpg); */
+    background-repeat: no-repeat;
+    /* background-repeat: repeat-x; */
+    /* background-repeat: repeat-y; */
+    /* background-repeat: space; */
+    /* background-repeat: round; */
+
+}
+.red{
+    /* background-color: #ea2222; */
+    height: 100px;
+    color: rgb(255, 255, 255);
+}
+
+#head{
+    background-color: rgb(208, 152, 67);
+}
+.two{
+    color: rgb(31, 87, 87);
+    /* background-color: blanchedalmond; */
+}
+
+.container{
+    height: 400px;
+    width: 400px;
+    border: 2px solid red;
+    background-image: url(background.jpg);
+    /* background-size: contain; */
+    /* background-size: cover; */
+    background-size: 50px 50px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    /* background shorthand is use to make every properties in one line */
+    /* background: contain red url(background.jpg) fixed right bottom; */
+
+}
+
+.navigation_bar{
+    height: 80px;
+    width: 1537px;
+    /* color: lightblue; */
+    background-color: rgb(7, 7, 173);
+    /* opacity: 0.5; */
+}
+
+.navigation_bar ol{
+    /* padding-left: 20px; */
+    /* padding-top: 12px; */
+    color: aliceblue;
+    float: left;
+}
+
+.navigation_bar li{
+    float:left;
+    padding: 10px;
+    
+}
