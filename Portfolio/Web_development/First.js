@@ -23,6 +23,7 @@ isPass: true
 };
 console.log(Student.fullName);
 console.log(Student["fullName"]);
+
 // changing value in Object "Student"
 Student.age = Student.age + 1;
 console.log(Student.age);
