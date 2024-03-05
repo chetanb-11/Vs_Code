@@ -8,7 +8,6 @@ console.log("Hello Js!");
 // full-name -> kebab Case
 // FullName -> Pascal Case
 
-
 fullName = "Bucky Barnes";
 price = 99.99;
 age = 24;
@@ -18,7 +17,7 @@ n = null;
 u = undefined;
 isfollow = true;
 console.log(isfollow);
- 
+
 // var-> Variable can ge re-declared and updated. A golbal variable
 // let -> Variable cannot be re-declared but can be updated. A block variable.
 // const -> Variable cannot be re-declared or updated. A block variable. Must be initialised.
@@ -27,15 +26,15 @@ let a = 5;
 var b = 6;
 const c = 55.5;
 // bigint to store big integer
-let x = bigint(5)
-let y = symbol("Hello!")
+x = BigInt(5);
+y = Symbol("Hello!");
 
 // Student is object
 // Object -> Collection of variables
 let Student = {
-fullName: "Bucky Barnes", 
-age: 19, 
-isPass: true
+  fullName: "Bucky Barnes",
+  age: 19,
+  isPass: true,
 };
 console.log(Student.fullName);
 console.log(Student["fullName"]);
@@ -56,7 +55,7 @@ console.log("a is", ++a);
 
 a = 5;
 b = "5";
-console.log("5 == \"5\"", a == b);
+console.log('5 == "5"', a == b);
 
 // Logical operators
 let cond1 = a == b;
@@ -71,26 +70,26 @@ console.log(cond1 || cond2);
 // alert("Hello World!");
 let number = 5;
 // let number = prompt("Enter number = ");
-if(number % 5 === 0) console.log("Number is multiple of 5");
+if (number % 5 === 0) console.log("Number is multiple of 5");
 else console.log("Number is not a multiple of 5");
 
 let scores = 70;
 // let scores = prompt("Enter your score: ");
-if(scores <= 100 && scores >= 90) console.log("Your grade is A!");
-else if(scores <= 89 && scores >= 70) console.log("Your grade is B!");
-else if(scores <= 69 && scores >= 60) console.log("Your grade is C!");
-else if(scores <= 59 && scores >= 50) console.log("Your grade is D!");
-else if(scores <= 49 && scores >= 0) console.log("Your grade is E!");
+if (scores <= 100 && scores >= 90) console.log("Your grade is A!");
+else if (scores <= 89 && scores >= 70) console.log("Your grade is B!");
+else if (scores <= 69 && scores >= 60) console.log("Your grade is C!");
+else if (scores <= 59 && scores >= 50) console.log("Your grade is D!");
+else if (scores <= 49 && scores >= 0) console.log("Your grade is E!");
 
 // Loops
-  // for loop-> 
-    // for-of loop->
-      // for(let i of str){ console.log("i", i); }
-      // for-in loop->
-      // let student = { name:"Rahul", age: 20 }
-      // for(let key in student){ console.log("key=", key, "value = ", student[key]);}
-for(let i = 1; i <= 100; i++){
-    console.log("Hello World!")
+// for loop->
+// for-of loop->
+// for(let i of str){ console.log("i", i); }
+// for-in loop->
+// let student = { name:"Rahul", age: 20 }
+// for(let key in student){ console.log("key=", key, "value = ", student[key]);}
+for (let i = 1; i <= 100; i++) {
+  console.log("Hello World!");
 }
 
 // Input -> prompt("message here: ");
@@ -101,11 +100,9 @@ for(let i = 1; i <= 100; i++){
 // while(Number(i) != p) {
 //   alert("You guessed the wrong number, guess again");
 //   i = prompt("Guess Number: ");
-  
+
 // }
 // alert("You guessed the correct number!");
-
-
 
 let str = "Hello World!";
 console.log(str.length);
@@ -118,23 +115,73 @@ let obj = {
   price: 15,
 };
 let str2 = "Barnes!";
-// Template Literals in JS 
-  // String Interpolation
-    // Other way of writing this
-    console.log("the cost of", obj.item, "is", obj.price, "rupees");
-    // OR 
-    console.log(`the cose of ${obj.item} is ${obj.price} rupees`);
-    // ${obj.item} is known as placeholders
+// Template Literals in JS
+// String Interpolation
+// Other way of writing this
+console.log("the cost of", obj.item, "is", obj.price, "rupees");
+// OR
+console.log(`the cose of ${obj.item} is ${obj.price} rupees`);
+// This is an example of template literal
+// ${obj.item} is known as placeholders
 
 // String Methods in JS
-  // Strings are immutable
-  // Functions to manipulate a string
-  str.toUpperCase();
-  str.toLowerCase();
-  str.trim(); //removes whitespaces from starting and ending
-  // Never changes original string creates new string with new value
-  str.slice(2, 5); //returns part of string
-  str.concat(str2); //conbines two strings
-  str.replace("H", "Y");
-  str.replaceAll("H", "Y");
-  str.charAt(3);
+// Strings are immutable
+// Functions to manipulate a string
+str.toUpperCase();
+str.toLowerCase();
+str.trim(); //removes whitespaces from starting and ending
+// Never changes original string creates new string with new value
+str.slice(2, 5); //returns part of string
+str.concat(str2); //conbines two strings
+str.replace("H", "Y");
+str.replaceAll("H", "Y");
+str.charAt(3);
+
+// Chapter 4 -> Arrays
+// Arrays is a special type of object
+let arr = [20, 50, 80, 70, 40, 10, 30, 60, 90];
+console.log(arr);
+console.log(arr.length);
+
+// ques 1
+let prices = [250, 645, 300, 900, 50];
+for (i = 0; i < 5; i++) {
+  prices[i] -= prices[i] / 10;
+}
+console.log(prices);
+
+// .push() add variables to the end of original array
+prices.push(55, 840);
+console.log(prices);
+// .pop() removes variable from the original array
+prices.pop();
+console.log(prices);
+// .toString prints a new string from array
+console.log(prices.toString());
+
+// .concat() joins multiple array and return a copy of it
+console.log(prices.concat(arr));
+// unshift() addes variable to starting in original array
+prices.unshift(55);
+console.log(prices);
+// shift() removes variable from starting in original array
+prices.shift();
+console.log(prices);
+// slice() prints a copy of array from index n to m-1
+console.log(prices.slice(1, 4));
+// splice() it removes 1 item from index 2 then addes 101 and 102 value at index 2
+// It changes original array
+console.log(prices);
+prices.splice(2, 1, 101, 102);
+console.log(prices);
+
+let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
+console.log(`Initials store companies were: ${companies}`);
+companies.shift();
+console.log(`Companies after first company was removies were: ${companies}`);
+companies.splice(1, 1, "Ola");
+console.log(`Companies after Uber was replaces with Ola were: ${companies}`);
+companies.push("Amazon");
+console.log(
+  `Companies after Amazon was also added to the store market were: ${companies}`
+);
