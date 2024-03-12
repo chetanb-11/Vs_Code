@@ -29,7 +29,7 @@ const c = 55.5;
 x = BigInt(5);
 y = Symbol("Hello!");
 
-// Student is object
+// mmnt is object
 // Object -> Collection of variables
 let Student = {
   fullName: "Bucky Barnes",
@@ -88,7 +88,7 @@ else if (scores <= 49 && scores >= 0) console.log("Your grade is E!");
 // for-in loop->
 // let student = { name:"Rahul", age: 20 }
 // for(let key in student){ console.log("key=", key, "value = ", student[key]);}
-for (let i = 1; i <= 100; i++) {
+for (let i = 1; i <= 5; i++) {
   console.log("Hello World!");
 }
 
@@ -185,3 +185,87 @@ companies.push("Amazon");
 console.log(
   `Companies after Amazon was also added to the store market were: ${companies}`
 );
+
+// Chapter 5 -> Functions in javaScript
+function myFunction(msg) {
+  console.log(msg);
+}
+
+myFunction("Hello, World!!");
+
+// Arrow Function
+// part of Modern JS
+
+const mmsg = (msg) => {
+  return msg;
+};
+console.log(mmsg("Hello, World!!"));
+
+let strlen = (str) => {
+  for (let i = 0; i < str.length; i++) {
+    if (
+      str[i] == "a" ||
+      str[i] == "e" ||
+      str[i] == "i" ||
+      str[i] == "o" ||
+      str[i] == "u"
+    ) {
+      console.log(str[i]);
+    }
+  }
+  // return str.length;
+};
+
+// console.log(strlen("Hello World"));
+strlen("chetan");
+
+// ForEach loop in Array
+// forEach can only be used for array not for string
+// arr.forEach(callBackFunction)
+// callback is a function passed as an argument to another function
+arr = [1, 2, 3, 4, 5];
+arr.forEach(function printVal(val) {
+  // value at each index
+  console.log(val);
+});
+// usually forEach is used in arrow function
+arr.forEach((val, idex, arr) => {
+  console.log(val, idex, arr);
+});
+// Three parameters are usually passed in forEach value then index and then arr itself
+// forEach is a Gigher order function or method
+// Higher order functions are function which take functions as parameters or return them
+
+let calcsquare = (val) => {
+  console.log(val * val);
+};
+
+arr.forEach(calcsquare);
+
+// More Array Methods
+//* Map Method
+let newarr = arr.map((val) => {
+  return val * 2;
+});
+console.log(newarr);
+// Old array remains same
+console.log(arr);
+
+//* Filter Method
+newarr = arr.filter((val) => {
+  return val > 2;
+});
+console.log(newarr);
+
+//* Reduce Method is used to print 1 value at end
+let sum = arr.reduce((res, cur) => {
+  return res + cur;
+});
+// Initially res is 1st value and cur is 2nd
+// After that res is sum of res and cur and cur is next value
+console.log(sum);
+// Finding larges with reduce method
+let lar = arr.reduce((res, cur)=>{
+  return res>cur?res:cur;
+})
+console.log(lar);

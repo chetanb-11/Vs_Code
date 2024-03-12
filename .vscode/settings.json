@@ -5,5 +5,6 @@
         "stdio.h": "c"
     },
     "C_Cpp.errorSquiggles": "disabled",
-    "C_Cpp.intelliSenseEngineFallback": "enabled"
+    "C_Cpp.intelliSenseEngineFallback": "enabled",
+    "livePreview.defaultPreviewPath": "/Portfolio/Web_development/First/First.html"
 }
