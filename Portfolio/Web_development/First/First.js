@@ -265,7 +265,53 @@ let sum = arr.reduce((res, cur) => {
 // After that res is sum of res and cur and cur is next value
 console.log(sum);
 // Finding larges with reduce method
-let lar = arr.reduce((res, cur)=>{
-  return res>cur?res:cur;
-})
+let lar = arr.reduce((res, cur) => {
+  return res > cur ? res : cur;
+});
 console.log(lar);
+
+//! Chapter -> DOM
+// When a web page is loaded, the browser creates a *Document Object Model (DOM) of page
+// For example to access background and manuplate it we have to address it like
+document.body.style.background = "green";
+console.dir((document.body.style.background = "green"));
+// console.dir is used to output objects in javaScript
+// These changes are Dynamic changes or manupulation
+//*  -> DOM Manipulation
+// Selecting with id
+document.getElementById("myId");
+// selecting with class
+document.getElementsByClassName("myClass");
+// Selecting with tag
+document.getElementsByTagName("p");
+// Query Delector
+// It automatically detects class, Id or tag
+let FirstEl = document.querySelector("p");
+console.dir(FirstEl);
+// returns first element
+let AllEl = document.querySelectorAll("p");
+console.dir(AllEl);
+// returns a NodeList of all tags mentioned
+// DOM are of three parts
+// -> text
+// -> Comments
+// -> Elements
+//* Properties
+console.log(FirstEl.tagName); //returns tag for elements nodes
+let dd = document.querySelector("div");
+console.dir(dd.innerText); // returns the text content of the element and all its children
+console.dir(dd.innerHTML); // returns the plain text or HTML contents in the element
+console.dir(dd.textContent); //returns textual content even for hidden elements
+// Uses
+let pp = document.querySelector("p");
+pp.innerText = "This p tags is now changed";
+pp.innerHTML = "<i>This is now italic p tag</i>";
+let h2 = document.querySelector("h2");
+h2.innerText += " From Bucky";
+console.log(pp.innerText);
+let divs = document.querySelectorAll(".box");
+let idx = 0;
+for (div of divs) {
+  div.innerText = `this is unique id of ${idx}`;
+  idx++;
+}
