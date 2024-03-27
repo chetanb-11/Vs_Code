@@ -25,3 +25,16 @@ let h2 = document.getElementsByTagName("h2");
 console.dir(h2.innerText);
 // h2.innerText = "Hello javaScript from Bucky!";
 // h2.innerText = "Hello";
+
+let newBtn = document.createElement("Button");
+console.log(newBtn);
+newBtn.innerText = "click me";
+newBtn.style.backgroundColor = "red";
+newBtn.style.textDecorationColor = "white";
+document.querySelector("body").append(newBtn);
+
+
+// Ques 2
+let para = document.querySelector("p");
+console.dir(para.getAttribute("class"));
+console.dir(para.classList)

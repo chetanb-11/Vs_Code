@@ -315,3 +315,36 @@ for (div of divs) {
   div.innerText = `this is unique id of ${idx}`;
   idx++;
 }
+
+// Attributes
+let attt = document.querySelector("#att");
+console.log(attt);
+
+let iid = attt.getAttribute("iid"); // returns the value of given attribute
+console.log(iid);
+
+iid = attt.setAttribute("iid", "attt"); //changes value of given attribute
+iid = attt.getAttribute("iid");
+console.log(iid);
+
+attt.style.backgroundColor = "blue"; // to change css style from javaScript
+attt.style.fontSize = "26px";
+attt.innerText = "Hello!";
+
+//Insert Elements
+let lst = document.querySelector(".list");
+let newBtn = document.createElement("button");
+newBtn.innerText = "Click me!";
+lst.prepend(newBtn); //adds at the start of node(inside)
+lst.append(newBtn); //adds at the end of node(inside)
+lst.before(newBtn); //adds at the start of node(outside)
+lst.after(newBtn); //adds at the end of node(outside)
+document.querySelector("body").prepend(newBtn); // other way for the same
+newBtn.remove();
+// append child
+// remove child
+console.dir(lst.classList)
+lst.classList.add("newclass"); //to add class through class lsit
+console.dir(lst.classList);
+// lst.classList.remove("newclass"); // to remove class through classList
+console.dir(lst.classList);

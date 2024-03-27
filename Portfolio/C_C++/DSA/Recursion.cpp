@@ -24,7 +24,7 @@ bool Palindrome(string arr, int end, int start){
 }
 
 int main(){
-
+    cout<<"Hello World!"
     fun(5);
 
     cout<<sum_of_natural_numbers(0);
