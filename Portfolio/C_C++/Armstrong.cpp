@@ -4,8 +4,9 @@ using namespace std;
 
 int main(){
 
-    int num = 5;
-    // cin>>num;
+    int num;
+    cout<<"Enter value of num"<<endl;
+    cin>>num;
     int Onum = num;
     int sum = 0;
     while(num > 0){

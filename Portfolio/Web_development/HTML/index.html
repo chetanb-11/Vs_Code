@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Can add meta data which carry informatin about data in HTML page -->
+    <meta name="description" content="Free HTML tutotial">
+    <meta name="learner" content="Bucky Barnes">
+    <!-- To make web page responsive for mobile screen we add below meta data -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- We can tell which charcter coding we are using -->
+    <meta charset="UTF-8">
+    <!-- We can make our page refresh after given seconds using meta data -->
+    <!-- <meta http-equiv="refresh", content="4"> -->
+    <title>Document</title>
+</head>
+<body>
+    <a href="https:\\google.com" target="_blank" title="This link opens Google web page">
+        Google
+    </a>
+    <br>
+    
+    <br>
+    <a href="page2.html">
+        Go to page 2.
+        </a>
+    <br>
+    
+    <br>
+    <a href="mailto:chetan87706@gmail.com">
+        mailto:
+        </a>
+    <br>
+    
+    <br>
+    <a href="https://wikipedia.org/wiki/shrek" target="_blank">
+        <img src="Shrek.png" alt="This is shrek's image" title="Shrek is shrexy">
+        </a>
+    <br>
+    
+    <br>
+    <!-- Control, autoplay, muted and loop are some boolean attributes -->
+    <audio controls autoplay muted loop src="Headlands.mp3"></audio>
+    <br>
+    <audio controls autoplay muted loop>
+        <source src="Headlands.mp3">
+        <source src="Headlands.wav"><!--runs this if upper format is not supported-->
+        This Web browser doesn't support HTML5 audio files<!--runs this if upper formats are  not supported-->
+    </audio>
+    <br>
+
+    <br>
+    <!-- <video controls autoplay muted loop src="doremon.mp4" width="450"> -->
+   <video controls width="450">
+        <source src="Doremon.mp4">
+        <source src="Doremon.mp4"><!--runs this if upper format is not supported-->
+        This Web browser doesn't support HTML5 video files<!--runs this if upper formats are  not supported-->
+    </video>
+    <br>
+
+    <br>
+    <p>This is normal text</p>
+    <p>This is <b>bold</b> text</p>
+    <p>This is <i>italic</i> text</p>
+    <p>This is <big>big</big> text</p>
+    <p>This is <small>small</small> text</p>
+    <p>This is <sub>subscript</sub> text</p>
+    <p>This is <sup>superscript</sup> text</p>
+    <p>This is <ins>inserted</ins> text</p>
+    <p>This is <del>deleted</del> text</p>
+    <p>This is <mark>marked</mark> text</p>
+    <br>
+
+    <br>
+    <h4>unordered list</h4>
+    <ul>
+        <li>Pizzas</li>
+            <ul>
+                <li>Domino's</li>
+            </ul>
+        <li>Burgers</li>
+            <ul>
+                <li>Burger King's</li>
+            </ul>
+        <li>Sandwich</li>
+            <ul>
+                <li>Subway</li>
+            </ul>
+        <li>Momos</li>
+            <ul>
+                <li>KKR</li>
+            </ul>
+    </ul>
+    <h4>ordered list</h4>
+    <ol type="I">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+        <li>Forth item</li>
+    </ol>
+    <h4>Discription list</h4>
+    <dl>
+        <dt>HTML</dt>
+        <dd>This adds structure to the webpage</dd>
+        <dt>CSS</dt>
+        <dd>This adds style to the webpage</dd>
+        <dt>JavaScript</dt>
+        <dd>This adds functionality to the webpage</dd>
+    </dl>
+    <br>
+
+    <br>
+    <h4>Table</h4>
+    <table bgcolor="black" width="500">
+        <tr bgcolor="grey"><!-- tr tag represents table row-->
+            <th>Sunday</th> <!-- th tag represents table header-->
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thusday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+        </tr>
+        <tr bgcolor="white" align="center">
+            <td>Closed</td><!-- td tag reprensents table data-->
+            <td>9 - 5</td><!-- td tag reprensents table data-->
+            <td>9 - 5</td><!-- td tag reprensents table data-->
+            <td>9 - 5</td><!-- td tag reprensents table data-->
+            <td>9 - 5</td><!-- td tag reprensents table data-->
+            <td>9 - 5</td><!-- td tag reprensents table data-->
+            <td>Closed</td><!-- td tag reprensents table data-->
+        </tr>
+    </table>
+    <br>
+
+    <br>
+    <span style="background-color: black; display: inline-block; width: 400px; height: 400px;">
+        <h4 style="color: white;">Hello</h4>
+        <p style="background-color: #222222; color: #ffffff">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus nisi sint, qui tempora ipsa maxime esse accusamus harum, ipsam ducimus dolorum veritatis ab. Minima voluptatibus eaque cum eos, voluptas placeat.</p>
+    </span>
+    <!-- span = add markup to text or a part of document -->
+    <!-- div = defines a division of document -->
+    <div style="background-color:grey">
+    <p><span style="color:red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum vitae porro doloremque dolore!</span> Laborum temporibus velit blanditiis accusantium labore necessitatibus non? Natus repellat, quo maiores vero mollitia quidem quia deserunt.</p>
+    </div>
+    <br>
+
+    <br>
+    <!-- iframes = embed content from other source into yout HTML document
+                   eg. used for ads and used for many hacking techniques -->
+    <!-- <iframe src="https://www.bing.com" width="500" height="250"> -->
+    <iframe style="border: 0;" src="page2.html" width="350" height="70"></iframe>
+    <br>
+
+    <br>
+    <a href="https:\\www.google.com" target="_blank">
+    <button disabled >Google</button><br><br>
+    <button style="background-color: grey;">Google</button>
+    </a>
+    <br>
+
+    <br>
+    <button onclick="dosomething()" style="background-color: rgb(54, 54, 54); color: rgb(20, 255, 3);">Click me!</button>
+    <h1><p id="test">Hello HTML!</p></h1>
+    <br>
+
+    <br>
+    <!-- action and method helps to send input data to php file in action through method (get is usually for search therefore post is more secure to use) -->
+    <form action="action_page.php" method="post">
+        <div>
+            <label for="title">title:</label>
+            <input type="radio" id="Mr." name="title" value="Mr.">
+            <label for="Mr.">Mr.</label>
+
+            <input type="radio" id="Mrs." name="title" value="Mrs.">
+            <label for="Mrs.">Mrs.</label>
+
+            <input type="radio" id="Phd." name="title" value="Phd.">
+            <label for="Phd.">Phd.</label>
+        </div>
+        <br>
+
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Bucky" required>
+        <br>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname" placeholder="Barnes">
+        <br>
+        
+        <label for="dob">DOB :____</label>
+        <input type="date" id="dob" name="dob" required>
+        <br>
+
+        <label for="phone">Phone :___</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" maxlength="10" minlength="10">
+        <br>
+        
+        <label for="mail">Gmail :___</label>
+        <input type="email" id="mail" name="mail" placeholder="example@gmail.com">
+        <br>
+
+        <label for="password">Password:_</label>
+        <input type="password" id="password" name="password" maxlength="12" minlength="6" placeholder="**********" required>
+        <br>
+        
+        <label for="quantity">Quantity:__</label>
+        <input type="number" id="quantity" name="quantity" min="0" max="99" value="1">
+        <br>
+        <label for="payment">Payment:___</label>
+        <select>
+            <option value="visa">visa</option>
+            <option value="mastercard">mastercard</option>
+            <option value="giftcard">giftcard</option>
+        </select>
+        <br>
+            
+        <input type="checkbox" id="recieve" name="recieve">
+        <label for="recieve">Recieve latest updates on email</label>
+        <br>
+                    
+            <div>
+            <input type="reset">
+            <input type="submit">
+        </div>
+    </form>
+
+    <script>
+        function dosomething(){
+            document.getElementById("test").innerHTML = "Hello JavaScript"
+        }
+    </script>
+</body>
+</html>

@@ -13,7 +13,7 @@
                 "UNICODE",
                 "_UNICODE"
             ],
-            "compilerPath": "C:/MinGW/bin/g++.exe",
+            "compilerPath": "C:\\msys64\\ucrt64\\bin\\g++.exe",
             "intelliSenseMode": "${default}",
             "cppStandard": "gnu++14",
             "cStandard": "c11",
