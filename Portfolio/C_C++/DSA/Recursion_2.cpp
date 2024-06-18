@@ -47,6 +47,12 @@ bool check_palindrome(int i, string &str)
     return false;
   return check_palindrome(i + 1, str);
 }
+int fibonacci(int n)
+{
+  if (n <= 1)
+    return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
 int main()
 {
   int arr[] = {1, 2, 3, 4, 5};
@@ -60,6 +66,7 @@ int main()
   for (int i = 0; i < n; i++)
     cout << arr[i] << " ";
   cout << endl;
-  cout << check_palindrome(0, str);
+  cout << check_palindrome(0, str)<<endl;
+  cout << fibonacci(1);
   return 0;
 }
