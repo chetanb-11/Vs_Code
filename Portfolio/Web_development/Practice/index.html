@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--This attribute tells that we will be using english language--> 
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--This attribute helps us to adjust the page ratio-->
+    <title>AC Index</title>
+</head>
+<body>
+  <header>
+    <pre>Education</pre>
+  </header>
+
+  <main>
+    <section>Education: Chitkara(CSE) | School: St. Xavier's High School</section>
+
+    <section>Experience: Microsoft intern</section>
+
+    <article>My story:</article>
+
+    <aside>Usually this is used for adding adds</aside>
+  <!--This is comment-->
+
+  <a href="https://google.com" target="_main">Google</a>
+  <!--target="_main" is used to open given link in new tab-->
+  <!--If we are using external link then it's known as absolute link-->
+
+  <a href="https://google.com" target="_main"><img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"></a>
+  <!--we can direct user to external website if clicked on image-->  
+  
+  <!--if we are adding internal link it's known as relative link-->
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  </br>
+  <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" 
+  height="50">
+  <!--Height or width can be adjusted by respectivaly adding tag Height or width-->
+
+  <div>
+    <p>
+    <right>
+      Bucky
+    </right>
+    </p>
+    <!--There's no such use of div, but it helps to creat a block through which we can 
+    edit only div to edit all it's elements-->
+    <!--div takes all the width of screen-->
+  </div>
+
+  <span>
+    <p>Barnes</p>
+    <!--Similar to div, but it takes only the width he needs-->
+  </span>
+
+  <ul>
+    <!--This is unordered list-->
+    <li>Apple</li>
+    <ul>
+      <!--This is unordered sublist of apple-->
+      <li>Color: red</li>
+      <li>Season: Winters</li>
+    </ul>
+    <li>Mango</li>
+    <ul>
+      <li>Color: Yellow</li>
+      <li>Season: Summer</li>
+    </ul>
+  </ul>
+  <ol>
+    <!--This is ordered list-->
+    <li>Apple</li>
+    <ol>
+      <!--This is ordered sublist of apple-->
+    <li>Color: red</li>
+      <li>Season: Winters</li>
+    </ol>
+    <li>Mango</li>
+    <ol>
+      <li>Color: Yellow</li>
+      <li>Season: Summer</li>
+    </ol>
+  </ol>
+
+  <!--Tables in HTML-->
+  <table>
+    <thead>
+    <!--caption tag is used to add caption above or below table-->
+    <caption>Student data</caption>
+    <!--Here tr stands for table row-->
+    <tr>
+    <!--Here th stands for table header-->
+      <th>Name</th>
+      <th>Roll no.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <!--td stands for table data-->
+      <td>Chetan</td>
+      <td>1310990317</td>
+    </tr>
+    <tr>
+      <td>Suman</td>
+      <td>1310990318</td>
+    </tr>
+  </tbody>
+  </table>
+
+
+  <table>
+    <thead>
+    <caption>Student data</caption>
+    <tr>
+    <th colspan="2">
+      INFORMATION
+    </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chetan</td>
+      <td>1310990317</td>
+    </tr>
+  </tbody>
+  </table>
+
+  <!--Forms in HTML-->
+  <!--action shows that where will data go after submission-->
+  <form action="/action.php">
+    <input type="text" placeholder="Enter your username">
+    <input type="password" placeholder="Enter your password">
+    <!--placeholder shows a temporary data in input-->
+    <br><br> 
+    <lable for="101">
+    <input type="radio" value="class XI" name="class" id="101">Class XI
+    </lable>
+    <!--id is used to recognise input on backend-->
+    <br><br>
+    <lable for="102">
+      <!--Only one radio button in a group can be selected at the same time-->
+    <input type="radio" value="class XII" name="class" id="102">Class XII
+  </lable>
+  </form>
+  <h5>Your fav subject</h5>
+  <lable for="math">
+    <input type="checkbox" value="math" name="subject" id="101">Mathematics
+  </lable>
+  <br>
+  <lable for="physics">
+    <input type="checkbox" value="physics" name="subject" id="102">Physics
+  </lable>
+  <br>
+  <lable for="chemistry">
+    <input type="checkbox" value="chemistry" name="subject" id="103">chemistry
+  </lable>
+  <br>
+  <lable for="biology">
+    <input type="checkbox" value="biology" name="subject" id="104">biology
+  </lable>
+  <br><br>
+
+  <!--textarea is description area-->
+  <!--we can adjust the rows and columns of description box-->
+  <textarea name="Great Website" placeholder="Give Your feedback here" rows="10" column="10"></textarea>
+  <h4>Select your city</h5>
+
+  <select name="city">
+    <option value="delhi">Delhi</option>
+    <option value="Pune">Pune</option>
+    <option value="Banglore">Banglore</option>
+    <option value="Hydrabad">Hydrabad</option>
+  </select>
+
+
+  <br><br>
+  <!--submit button redirects to lalala.html-->
+  <a href="lalala.html">
+    <input type="submit" value="submit">
+  </a>
+
+
+  <br><br>
+
+  <!--iframe displays the embaded code like video of youtube or map in google maps-->
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55131.26081807616!2d75.20564034091997!3d30.274019600747458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3910c4a116eee22b%3A0x82b0a16c3795d817!2sRampura%20Phul%2C%20Punjab!5e0!3m2!1sen!2sin!4v1695021366089!5m2!1sen!2sin" width="450" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <br><br>
+
+  <!--video src stands for video source to display video named screenrec.mp4-->
+  <video src="screenrec.mp4"width="400" controls autoplay loop></video>
+  <!--controls attribe shows the controls on video-->
+  <!--autoplay helps to play video automativally when uset visits website-->
+  <!--loop create loop of video-->
+  </main>
+
+  <footer>
+    <!--footer is always displayed at end-->
+    <h3>Contact me at Hello@Gmail.com</h3>
+  </footer>
+</body>
+</html>

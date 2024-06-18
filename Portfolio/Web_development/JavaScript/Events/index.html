@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Event Handling using inline Html tags</h1>
+    <button
+      onclick="console.log('A Button was clicked!'); alert('FBI, open up the door!')"
+    >
+      Click me!
+    </button>
+    <button ondblclick="console.log('A Button was clicked 2 times!!')">
+      Click me 2 times!!
+    </button>
+    <br />
+    <div onmouseover="console.log('You\'r mouse is on div')">Hover on this</div>
+    <br />
+    <hr />
+    <h1>Event Handling using JS</h1>
+    <button id="btn1">Click me!</button>
+    <button id="btn2">Click me 2 times!!</button>
+    <br />
+    <div id="box">Hover on this</div>
+    <hr />
+    <button id="evt_details">evt details!</button>
+    <hr />
+    <button id="toggle">Toggle Button</button>
+    <script src="app.js"></script>
+  </body>
+</html>

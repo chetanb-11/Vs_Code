@@ -1,3 +1,6 @@
-int j = 1; j <= i; j++) {
-        //     printf(" %d", j);
-        // }
+#include<stdio.h>
+int main(){
+        for (int j = 1; j <= 10; j++) {
+                printf(" %d", j);
+                }
+}

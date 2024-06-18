@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voting System</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+    color: #2d3436;
+  }
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+  }
+  .login-box {
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+  }
+  input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #45aaf2;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0bceaf;
+  }
+  /* .voting {
+    display: none;
+    width: 80%;
+    max-width: 600px;
+} */
+.container {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    background-color: #fff;
+    padding: 20px;
+    padding-right: 0%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .party {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 550px; /* Set the width here */
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.party img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid #2d3436;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.party button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #45aaf2;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.party:hover {
+    transform: translateY(-5px); /* Move the box up on hover */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.party button:hover {
+    background-color: #0bceaf;
+}
+
+  .show-results-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #45aaf2, #4bcffa);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1; 
+  }
+  .show-results-button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #20bf6b, #0bceaf);
+  }
+  .result-box {
+    width: 50%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="login-container">
+  <div class="login-box">
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="return false;">
+      <input type="text" id="username" placeholder="Enter your name">
+      <input type="password" id="password" placeholder="Enter your authentication">
+      <input type="text" id="state" placeholder="Enter your state">
+      <input type="text" id="nationality" placeholder="Enter your nationality">
+      <button type="button" onclick="login()">Login</button>
+    </form>
+  </div>
+</div>
+<div class="container">
+  <div class="voting">
+    <h1>Voting</h1>
+    <div class="party">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Bharatiya_Janata_Party_logo.svg" alt="BJP">
+        <button onclick="voteOption(1)">Vote BJP</button>
+    </div>
+    <div class="party">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Indian_National_Congress_hand_logo.svg" alt="INC">
+        <button onclick="voteOption(2)">Vote INC</button>
+    </div>
+    <div class="party">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Aam_Aadmi_Party_logo_%28English%29.svg/1200px-Aam_Aadmi_Party_logo_%28English%29.svg.png" alt="AAP">
+        <button onclick="voteOption(3)">Vote AAP</button>
+    </div>
+    <div class="party">
+        <img src="https://i.ndtvimg.com/mt/2013-11/NOTA_360x270.jpg" alt="NOTA">
+        <button onclick="voteOption(4)">Vote None of the Above</button>
+    </div>
+  </div>
+  <div class="results"></div>
+  <button class="show-results-button" onclick="showResults()">Show Results</button>
+</div>
+<script>
+  function login() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var state = document.getElementById("state").value;
+    var nationality = document.getElementById("nationality").value;
+    
+    if (username && password && state && nationality) {
+      document.querySelector('.login-container').style.display = 'none';
+      document.querySelector('.container').style.display = 'flex';
+    } else {
+      alert("Please fill in all fields!");
+    }
+  }
+  
+  let votes = [0, 0, 0, 0]; 
+
+  function voteOption(option) {
+    votes[option - 1]++;
+    alert("Vote casted successfully!");
+  }
+
+  function showResults() {
+    document.querySelector('.voting').style.display = 'none';
+    document.querySelector('.results').style.display = 'block';
+    let resultString = '';
+    votes.forEach((count, index) => {
+      const optionNumber = index + 1;
+      resultString += `<div class="result-box">Option ${optionNumber}: ${count} votes</div>`;
+    });
+    document.querySelector('.results').innerHTML = resultString;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome to my class</h1>
+    <input type="checkbox" id="select_all" oninput="select_all_boxes();" />
+    <label for="select_all">Select all</label>
+    <br />
+    <br />
+    <input type="checkbox" id="C++" onchange="print_fees();"/>
+    <label for="C++">C++:7200</label>
+    <br />
+    <input type="checkbox" id="java" onchange="print_fees();"/>
+    <label for="java">Java:8000</label>
+    <br />
+    <input type="checkbox" id="mern" onchange="print_fees();"/>
+    <label for="mern">Mern Stack:14000</label>
+    <br />
+    <button onclick="print_fees();" class="calc">Calculate fees:</button>
+    <p class="fees"></p>
+    <hr />
+    <h1>On the scale of 10, what is you understanding ofC/C++</h1>
+    <input
+      type="range"
+      id="rrange"
+      max="10"
+      min="0"
+      step="1"
+      value="5"
+      oninput="print_value();"
+    />
+    <input type="number" id="p_range" value="5" />
+    <hr />
+    <h1>Select your mode of learning</h1>
+    <input type="radio" name="mode" id="online" />
+    <label for="online">Online</label>
+    <input type="radio" name="mode" id="offline" />
+    <label for="offline">Offline</label>
+    <input type="radio" name="mode" id="hybrid" />
+    <label for="hybrid">Hybrid</label>
+    <script>
+      let select_all = document.getElementById("select_all");
+      let cpp = document.getElementById("C++");
+      let java = document.getElementById("java");
+      let mern = document.getElementById("mern");
+
+      function select_all_boxes() {
+        if (select_all.checked) {
+          cpp.checked = true;
+          java.checked = true;
+          mern.checked = true;
+        } else {
+          cpp.checked = false;
+          java.checked = false;
+          mern.checked = false;
+        }
+      }
+
+      function print_fees() {
+        let fees = 0;
+        if (cpp.checked) fees += 7200;
+        if (java.checked) fees += 8000;
+        if (mern.checked) fees += 14000;
+        document.getElementsByClassName("fees")[0].innerText = `${fees}`;
+      }
+
+      function print_value(params) {
+        let value = document.getElementById("rrange").value;
+        document.getElementById("p_range").value = value;
+      }
+      // print_fees();
+    </script>
+  </body>
+</html>

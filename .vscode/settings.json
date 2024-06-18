@@ -1,4 +1,9 @@
 {
+    "makefile.compileCommandsPath": ".vscode/compile_commands.json",
     "C_Cpp.errorSquiggles": "disabled",
-    "C_Cpp.default.compilerPath": "C:\\msys64\\ucrt64\\bin\\g++.exe"
+    "C_Cpp.default.compilerPath": "C:\\msys64\\mingw64\\bing++.exe",
+    "files.associations": {
+        "iostream": "cpp",
+        "string_view": "cpp"
+    }
 }

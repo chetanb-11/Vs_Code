@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tic Tac Toe</h1>
+      <div class="board">
+        <button onclick="mark('a');" id="a" class="cell"> </button>
+        <button onclick="mark('b');" id="b" class="cell"> </button>
+        <button onclick="mark('c');" id="c" class="cell"> </button>
+        <button onclick="mark('d');" id="d" class="cell"> </button>
+        <button onclick="mark('e');" id="e" class="cell"> </button>
+        <button onclick="mark('f');" id="f" class="cell"> </button>
+        <button onclick="mark('g');" id="g" class="cell"> </button>
+        <button onclick="mark('h');" id="h" class="cell"> </button>
+        <button onclick="mark('i');" id="i" class="cell"> </button>
+        </div>
+      <h1 id="win_X">X is our final winner</h1>
+      <h1 id="win_O">O is our final winner</h1>
+    </div>
+    <div class="reset">
+      <button onclick="reload();">reset</button>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
