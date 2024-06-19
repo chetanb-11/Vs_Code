@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
 }
@@ -52,4 +52,89 @@ button {
     width: 50px;
     border-radius: 50%;
 
-}
+} */
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .display {
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: right;
+  }
+  
+  #content_1,
+  #content_2 {
+    color: #333;
+    font-size: 24px;
+    line-height: 1;
+  }
+  
+  .box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .btn {
+    background-color: #ccc;
+    color: #333;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #999;
+  }
+  
+  .btn-number {
+    background-color: #e0e0e0;
+  }
+  
+  .btn-operator {
+    background-color: #ffa500;
+    color: #fff;
+  }
+  
+  .btn-function {
+    background-color: #aaa;
+  }
+  
+  .btn-equal {
+    background-color: #4caf50;
+    color: #fff;
+    grid-column: 3 / span 2;
+  }
+  
+  .btn-zero {
+    grid-column: 1 / span 2;
+    border-radius: 25px;
+  }
