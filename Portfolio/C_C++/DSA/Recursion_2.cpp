@@ -53,9 +53,25 @@ int fibonacci(int n)
     return n;
   return fibonacci(n - 1) + fibonacci(n - 2);
 }
+void print_subsequeces(int i, vector<int> nrr, int arr[], int n)
+{
+  if (i >= n)
+  {
+    for (auto j : nrr)
+
+      cout << j << " ";
+    cout << endl;
+    return;
+  }
+
+  nrr.push_back(arr[i]);
+  print_subsequeces(i + 1, nrr, arr, n);
+  nrr.pop_back();
+  print_subsequeces(i + 1, nrr, arr, n);
+}
 int main()
 {
-  int arr[] = {1, 2, 3, 4, 5};
+  int arr[] = {1, 2, 3};
   int n = sizeof(arr) / sizeof(arr[0]);
   string str = "MADAM";
   printname(5);
@@ -66,7 +82,10 @@ int main()
   for (int i = 0; i < n; i++)
     cout << arr[i] << " ";
   cout << endl;
-  cout << check_palindrome(0, str)<<endl;
-  cout << fibonacci(1);
+  cout << check_palindrome(0, str) << endl;
+  cout << fibonacci(1) << endl;
+  cout << "Print subsequences" << endl;
+  vector<int> nrr;
+  print_subsequeces(0, nrr, arr, n);
   return 0;
 }
