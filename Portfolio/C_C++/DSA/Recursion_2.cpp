@@ -69,11 +69,33 @@ void print_subsequeces(int i, vector<int> nrr, int arr[], int n)
   nrr.pop_back();
   print_subsequeces(i + 1, nrr, arr, n);
 }
+void print_subsequeces_with_sum(int i, int arr[], int n, vector<int> &vec, int sum, int s)
+{
+  if (i >= n)
+  {
+    if (sum == s)
+    {
+      for (auto j : vec)
+        cout << j << " ";
+      cout << endl;
+    }
+    return;
+  }
+  // cout << i << endl;
+  vec.push_back(arr[i]);
+  sum += arr[i];
+  print_subsequeces_with_sum(i + 1, arr, n, vec, sum, s);
+  vec.pop_back();
+  sum -= arr[i];
+  print_subsequeces_with_sum(i + 1, arr, n, vec, sum, s);
+  return;
+}
 int main()
 {
-  int arr[] = {1, 2, 3};
+  int arr[] = {1, 2, 1};
   int n = sizeof(arr) / sizeof(arr[0]);
   string str = "MADAM";
+  vector<int> vec;
   printname(5);
   printton(1, 5);
   cout << "Sum of N numbers is: " << sum_of_num(3) << endl;
@@ -87,5 +109,7 @@ int main()
   cout << "Print subsequences" << endl;
   vector<int> nrr;
   print_subsequeces(0, nrr, arr, n);
+  cout << "Print subsequences whose sum is k" << endl;
+  print_subsequeces_with_sum(0, arr, n, vec, 0, 2);
   return 0;
 }
