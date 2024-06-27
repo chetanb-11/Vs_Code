@@ -85,11 +85,61 @@ void print_subsequeces_with_sum(int i, int arr[], int n, vector<int> &vec, int s
   vec.push_back(arr[i]);
   sum += arr[i];
   print_subsequeces_with_sum(i + 1, arr, n, vec, sum, s);
+
   vec.pop_back();
   sum -= arr[i];
   print_subsequeces_with_sum(i + 1, arr, n, vec, sum, s);
+
   return;
 }
+
+bool print_any_one_subsequeces_with_sum(int i, int arr[], int n, vector<int> &vec, int sum, int s)
+{
+  if (i >= n)
+  {
+    if (sum == s)
+    {
+      for (auto j : vec)
+        cout << j << " ";
+      cout << endl;
+      return true;
+    }
+    return false;
+  }
+  // cout << i << endl;
+  vec.push_back(arr[i]);
+  sum += arr[i];
+  if (print_any_one_subsequeces_with_sum(i + 1, arr, n, vec, sum, s))
+    return true;
+
+  vec.pop_back();
+  sum -= arr[i];
+  if (print_any_one_subsequeces_with_sum(i + 1, arr, n, vec, sum, s))
+    return true;
+
+  return false;
+}
+
+int count_subsequeces_with_sum(int i, int arr[], int n, int sum, int s)
+{
+  if (i >= n)
+  {
+    if (sum == s)
+    {
+      return 1;
+    }
+    return 0;
+  }
+
+  sum += arr[i];
+  int l = count_subsequeces_with_sum(i + 1, arr, n, sum, s);
+
+  sum -= arr[i];
+  int r = count_subsequeces_with_sum(i + 1, arr, n, sum, s);
+
+  return l + r;
+}
+
 int main()
 {
   int arr[] = {1, 2, 1};
@@ -109,7 +159,11 @@ int main()
   cout << "Print subsequences" << endl;
   vector<int> nrr;
   print_subsequeces(0, nrr, arr, n);
-  cout << "Print subsequences whose sum is k" << endl;
+  cout << "Print subsequences whose sum is 2" << endl;
   print_subsequeces_with_sum(0, arr, n, vec, 0, 2);
+  cout << "Print any one subsequences whose sum is 2" << endl;
+  print_any_one_subsequeces_with_sum(0, arr, n, vec, 0, 2);
+  cout << "Count subsequences whose sum is 2" << endl;
+  cout << count_subsequeces_with_sum(0, arr, n, 0, 2);
   return 0;
 }
